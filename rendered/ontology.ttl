@@ -1,0 +1,218 @@
+@prefix : <https://w3id.org/openplannerteam/profile#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/openplannerteam/profile#> .
+
+<https://w3id.org/openplannerteam/profile#> rdf:type owl:Ontology ;
+                                             <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                             <http://purl.org/dc/terms/creator> <https://biblio.ugent.be/person/802002413821> ,
+                                                                                <https://pietercolpaert.be/#me> ;
+                                             <http://purl.org/dc/terms/description> "This ontology describes the OpenPlanner profile data model."@en ;
+                                             <http://purl.org/dc/terms/issued> "2019-06-14"^^xsd:date ;
+                                             <http://purl.org/dc/terms/modified> "2019-06-14"^^xsd:date ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "opp" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/openplannerteam/profile#" ;
+                                             rdfs:label "OpenPlanner Profile Vocabulary"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/hasUnit
+<http://qudt.org/schema/qudt/hasUnit> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/primaryTopic
+<http://xmlns.com/foaf/0.1/primaryTopic> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/openplannerteam/profile#fromProperty
+:fromProperty rdf:type owl:ObjectProperty ;
+              rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+              rdfs:label "fromProperty"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasAccessRules
+:hasAccessRules rdf:type owl:ObjectProperty ;
+                rdfs:range rdf:list ;
+                rdfs:comment "An ordered list of rules that determines whether or not this way is accessible."@en ;
+                rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+                rdfs:label "hasAccessRules"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasObject
+:hasObject rdf:type owl:ObjectProperty ;
+           rdfs:domain :Condition ;
+           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+           rdfs:label "hasObject"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasObstacleRules
+:hasObstacleRules rdf:type owl:ObjectProperty ;
+                  rdfs:range rdf:list ;
+                  rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+                  rdfs:label "hasObstacleRules"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasOnewayRules
+:hasOnewayRules rdf:type owl:ObjectProperty ;
+                rdfs:range rdf:list ;
+                rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+                rdfs:label "hasOnewayRules"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasPredicate
+:hasPredicate rdf:type owl:ObjectProperty ;
+              rdfs:domain :Condition ;
+              rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+              rdfs:label "hasPredicate"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasPriorityRules
+:hasPriorityRules rdf:type owl:ObjectProperty ;
+                  rdfs:range rdf:list ;
+                  rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+                  rdfs:label "hasPriorityRules"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasSpeedRules
+:hasSpeedRules rdf:type owl:ObjectProperty ;
+               rdfs:range rdf:list ;
+               rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+               rdfs:label "hasSpeedRules"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#match
+:match rdf:type owl:ObjectProperty ;
+       rdfs:domain :Rule ;
+       rdfs:range :Condition ;
+       rdfs:comment "Describes a condition to match."@en ;
+       rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+       rdfs:label "match"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/openplannerteam/profile#hasAccess
+:hasAccess rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:boolean ;
+           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+           rdfs:label "hasAccess"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasMaxSpeed
+:hasMaxSpeed rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:double ;
+             <http://qudt.org/schema/qudt/hasUnit> <http://qudt.org/vocab/unit/KM-PER-HR> ;
+             rdfs:comment "The maximum configured speed, in km/h."@en ;
+             rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+             rdfs:label "hasMaxSpeed"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasPriority
+:hasPriority rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:double ;
+             rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+             rdfs:label "hasPriority"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#hasSpeed
+:hasSpeed rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:double ;
+          rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+          rdfs:label "hasSpeed"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#isObstacle
+:isObstacle rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:boolean ;
+            rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+            rdfs:label "isObstacle"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#isOneway
+:isOneway rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+          rdfs:label "isOneway"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#isReversed
+:isReversed rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:boolean ;
+            rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+            rdfs:label "isReversed"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#usePublicTransport
+:usePublicTransport rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:comment "Should public transportation be used."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+                    rdfs:label "usePublicTransport"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#list
+rdf:list rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/openplannerteam/profile#Condition
+:Condition rdf:type owl:Class ;
+           owl:disjointWith :Rule ;
+           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+           rdfs:label "Condition"@en .
+
+
+###  https://w3id.org/openplannerteam/profile#Rule
+:Rule rdf:type owl:Class ;
+      rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+      rdfs:label "Rule"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://biblio.ugent.be/person/802002413821
+<https://biblio.ugent.be/person/802002413821> rdf:type owl:NamedIndividual ,
+                                                       <http://xmlns.com/foaf/0.1/Person> ;
+                                              <http://xmlns.com/foaf/0.1/mbox> "harm.delva@ugent.be" ;
+                                              <http://xmlns.com/foaf/0.1/name> "Harm Delva" .
+
+
+###  https://w3id.org/openplannerteam/profile
+<https://w3id.org/openplannerteam/profile> rdf:type owl:NamedIndividual ,
+                                                    <http://xmlns.com/foaf/0.1/Document> ;
+                                           <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/openplannerteam/profile#> .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

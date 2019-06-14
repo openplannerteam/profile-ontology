@@ -1,0 +1,206 @@
+<https://w3id.org/openplannerteam/profile#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/openplannerteam/profile#> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/dc/terms/creator> <https://biblio.ugent.be/person/802002413821> .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/dc/terms/creator> <https://pietercolpaert.be/#me> .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/dc/terms/description> "This ontology describes the OpenPlanner profile data model."@en .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/dc/terms/issued> "2019-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/dc/terms/modified> "2019-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "opp" .
+<https://w3id.org/openplannerteam/profile#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/openplannerteam/profile#" .
+<https://w3id.org/openplannerteam/profile#> <http://www.w3.org/2000/01/rdf-schema#label> "OpenPlanner Profile Vocabulary"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/hasUnit
+<http://qudt.org/schema/qudt/hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/primaryTopic
+<http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/openplannerteam/profile#fromProperty
+<https://w3id.org/openplannerteam/profile#fromProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#fromProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#fromProperty> <http://www.w3.org/2000/01/rdf-schema#label> "fromProperty"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasAccessRules
+<https://w3id.org/openplannerteam/profile#hasAccessRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasAccessRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#list> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openplannerteam/profile#hasAccessRules> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered list of rules that determines whether or not this way is accessible."@en .
+<https://w3id.org/openplannerteam/profile#hasAccessRules> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasAccessRules> <http://www.w3.org/2000/01/rdf-schema#label> "hasAccessRules"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasObject
+<https://w3id.org/openplannerteam/profile#hasObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasObject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openplannerteam/profile#Condition> .
+<https://w3id.org/openplannerteam/profile#hasObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasObject> <http://www.w3.org/2000/01/rdf-schema#label> "hasObject"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasObstacleRules
+<https://w3id.org/openplannerteam/profile#hasObstacleRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasObstacleRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#list> .
+<https://w3id.org/openplannerteam/profile#hasObstacleRules> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasObstacleRules> <http://www.w3.org/2000/01/rdf-schema#label> "hasObstacleRules"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasOnewayRules
+<https://w3id.org/openplannerteam/profile#hasOnewayRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasOnewayRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#list> .
+<https://w3id.org/openplannerteam/profile#hasOnewayRules> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasOnewayRules> <http://www.w3.org/2000/01/rdf-schema#label> "hasOnewayRules"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasPredicate
+<https://w3id.org/openplannerteam/profile#hasPredicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasPredicate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openplannerteam/profile#Condition> .
+<https://w3id.org/openplannerteam/profile#hasPredicate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasPredicate> <http://www.w3.org/2000/01/rdf-schema#label> "hasPredicate"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasPriorityRules
+<https://w3id.org/openplannerteam/profile#hasPriorityRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasPriorityRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#list> .
+<https://w3id.org/openplannerteam/profile#hasPriorityRules> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasPriorityRules> <http://www.w3.org/2000/01/rdf-schema#label> "hasPriorityRules"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasSpeedRules
+<https://w3id.org/openplannerteam/profile#hasSpeedRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#hasSpeedRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#list> .
+<https://w3id.org/openplannerteam/profile#hasSpeedRules> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasSpeedRules> <http://www.w3.org/2000/01/rdf-schema#label> "hasSpeedRules"@en .
+# 
+# https://w3id.org/openplannerteam/profile#match
+<https://w3id.org/openplannerteam/profile#match> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openplannerteam/profile#match> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openplannerteam/profile#Rule> .
+<https://w3id.org/openplannerteam/profile#match> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openplannerteam/profile#Condition> .
+<https://w3id.org/openplannerteam/profile#match> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a condition to match."@en .
+<https://w3id.org/openplannerteam/profile#match> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#match> <http://www.w3.org/2000/01/rdf-schema#label> "match"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/openplannerteam/profile#hasAccess
+<https://w3id.org/openplannerteam/profile#hasAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#hasAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/openplannerteam/profile#hasAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasAccess> <http://www.w3.org/2000/01/rdf-schema#label> "hasAccess"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasMaxSpeed
+<https://w3id.org/openplannerteam/profile#hasMaxSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#hasMaxSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/openplannerteam/profile#hasMaxSpeed> <http://qudt.org/schema/qudt/hasUnit> <http://qudt.org/vocab/unit/KM-PER-HR> .
+<https://w3id.org/openplannerteam/profile#hasMaxSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum configured speed, in km/h."@en .
+<https://w3id.org/openplannerteam/profile#hasMaxSpeed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasMaxSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "hasMaxSpeed"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasPriority
+<https://w3id.org/openplannerteam/profile#hasPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#hasPriority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/openplannerteam/profile#hasPriority> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasPriority> <http://www.w3.org/2000/01/rdf-schema#label> "hasPriority"@en .
+# 
+# https://w3id.org/openplannerteam/profile#hasSpeed
+<https://w3id.org/openplannerteam/profile#hasSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#hasSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/openplannerteam/profile#hasSpeed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#hasSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "hasSpeed"@en .
+# 
+# https://w3id.org/openplannerteam/profile#isObstacle
+<https://w3id.org/openplannerteam/profile#isObstacle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#isObstacle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/openplannerteam/profile#isObstacle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#isObstacle> <http://www.w3.org/2000/01/rdf-schema#label> "isObstacle"@en .
+# 
+# https://w3id.org/openplannerteam/profile#isOneway
+<https://w3id.org/openplannerteam/profile#isOneway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#isOneway> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/openplannerteam/profile#isOneway> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#isOneway> <http://www.w3.org/2000/01/rdf-schema#label> "isOneway"@en .
+# 
+# https://w3id.org/openplannerteam/profile#isReversed
+<https://w3id.org/openplannerteam/profile#isReversed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#isReversed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/openplannerteam/profile#isReversed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#isReversed> <http://www.w3.org/2000/01/rdf-schema#label> "isReversed"@en .
+# 
+# https://w3id.org/openplannerteam/profile#usePublicTransport
+<https://w3id.org/openplannerteam/profile#usePublicTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/openplannerteam/profile#usePublicTransport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/openplannerteam/profile#usePublicTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Should public transportation be used."@en .
+<https://w3id.org/openplannerteam/profile#usePublicTransport> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#usePublicTransport> <http://www.w3.org/2000/01/rdf-schema#label> "usePublicTransport"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#list
+# 
+# http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/openplannerteam/profile#Condition
+<https://w3id.org/openplannerteam/profile#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openplannerteam/profile#Condition> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/openplannerteam/profile#Rule> .
+<https://w3id.org/openplannerteam/profile#Condition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Condition"@en .
+# 
+# https://w3id.org/openplannerteam/profile#Rule
+<https://w3id.org/openplannerteam/profile#Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openplannerteam/profile#Rule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/openplannerteam/profile#> .
+<https://w3id.org/openplannerteam/profile#Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://biblio.ugent.be/person/802002413821
+<https://biblio.ugent.be/person/802002413821> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://biblio.ugent.be/person/802002413821> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://biblio.ugent.be/person/802002413821> <http://xmlns.com/foaf/0.1/mbox> "harm.delva@ugent.be" .
+<https://biblio.ugent.be/person/802002413821> <http://xmlns.com/foaf/0.1/name> "Harm Delva" .
+# 
+# https://w3id.org/openplannerteam/profile
+<https://w3id.org/openplannerteam/profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/openplannerteam/profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<https://w3id.org/openplannerteam/profile> <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/openplannerteam/profile#> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

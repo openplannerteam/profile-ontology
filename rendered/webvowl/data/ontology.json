@@ -1,0 +1,691 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/openplannerteam/profile", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
+    "iri" : "https://w3id.org/openplannerteam/profile#",
+    "author" : [ "https://biblio.ugent.be/person/802002413821", "https://pietercolpaert.be/#me" ],
+    "description" : {
+      "en" : "This ontology describes the OpenPlanner profile data model."
+    },
+    "labels" : {
+      "en" : "OpenPlanner Profile Vocabulary"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://biblio.ugent.be/person/802002413821",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://pietercolpaert.be/#me",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "opp",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-06-14",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2019-06-14",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 5,
+    "objectPropertyCount" : 9,
+    "datatypePropertyCount" : 8,
+    "individualCount" : 2
+  },
+  "class" : [ {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Thing"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#list",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "list"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#Condition",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Condition",
+      "en" : "Condition"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#Rule",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Rule",
+      "en" : "Rule"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Document",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Document"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/openplannerteam/profile",
+      "baseIri" : "https://w3id.org/openplannerteam",
+      "annotations" : {
+        "primaryTopic" : [ {
+          "identifier" : "primaryTopic",
+          "language" : "undefined",
+          "value" : "https://w3id.org/openplannerteam/profile#",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "profile"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "4",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "individuals" : [ {
+      "iri" : "https://biblio.ugent.be/person/802002413821",
+      "baseIri" : "https://biblio.ugent.be/person",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Harm Delva",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "harm.delva@ugent.be",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "802002413821"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "18",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasPredicate",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPredicate",
+      "en" : "hasPredicate"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasSpeed",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSpeed",
+      "en" : "hasSpeed"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#match",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "match",
+      "en" : "match"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Describes a condition to match."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#isObstacle",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isObstacle",
+      "en" : "isObstacle"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasObject",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasObject",
+      "en" : "hasObject"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasPriorityRules",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPriorityRules",
+      "en" : "hasPriorityRules"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "range" : "7",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#fromProperty",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fromProperty",
+      "en" : "fromProperty"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasObstacleRules",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasObstacleRules",
+      "en" : "hasObstacleRules"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#isOneway",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isOneway",
+      "en" : "isOneway"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasAccess",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "20",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAccess",
+      "en" : "hasAccess"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasAccessRules",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAccessRules",
+      "en" : "hasAccessRules"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "An ordered list of rules that determines whether or not this way is accessible."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#usePublicTransport",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "16",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usePublicTransport",
+      "en" : "usePublicTransport"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Should public transportation be used."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#isReversed",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isReversed",
+      "en" : "isReversed"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasPriority",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPriority",
+      "en" : "hasPriority"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasOnewayRules",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOnewayRules",
+      "en" : "hasOnewayRules"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasMaxSpeed",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "10",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ],
+      "hasUnit" : [ {
+        "identifier" : "hasUnit",
+        "language" : "undefined",
+        "value" : "http://qudt.org/vocab/unit/KM-PER-HR",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMaxSpeed",
+      "en" : "hasMaxSpeed"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "The maximum configured speed, in km/h."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasSpeedRules",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSpeedRules",
+      "en" : "hasSpeedRules"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "33"
+  } ]
+}
