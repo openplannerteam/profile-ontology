@@ -1,0 +1,153 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix unit:   <http://qudt.org/vocab/unit/> .
+@prefix opp:    <https://w3id.org/openplannerteam/profile#> .
+
+# About
+
+<https://w3id.org/openplannerteam/profile>
+        a                 foaf:Document ;
+        foaf:primaryTopic opp: .
+
+opp:    a                              owl:Ontology ;
+        dct:description                "This ontology describes the OpenPlanner profile data model."@en ;
+        cc:license                     <https://creativecommons.org/licenses/by/4.0/> ;
+        rdfs:label                     "OpenPlanner Profile Vocabulary"@en ;
+        vann:preferredNamespacePrefix  "opp" ;
+        vann:preferredNamespaceUri     "https://w3id.org/openplannerteam/profile#" ;
+        dct:creator                    <https://biblio.ugent.be/person/802002413821> ;
+        dct:creator                    <https://pietercolpaert.be/#me> ;
+        dct:issued                     "2019-06-14"^^xsd:date ;
+        dct:modified                   "2019-06-14"^^xsd:date .
+
+<https://biblio.ugent.be/person/802002413821> 
+        a                 foaf:Person ;
+        foaf:name         "Harm Delva" ;
+        foaf:mbox         "harm.delva@ugent.be" .
+
+
+# Element Classes
+
+osm:Rule  
+        a                     rdfs:Class , owl:Class ;
+        rdfs:label            "Rule"@en ;
+        owl:disjointWith      osm:Condition ;
+        rdfs:isDefinedBy      opp: .
+
+osm:Condition  
+        a                     rdfs:Class , owl:Class ;
+        rdfs:label            "Condition"@en ;
+        owl:disjointWith      osm:Rule ;
+        rdfs:isDefinedBy      opp: .
+
+# Object Properties
+
+osm:match
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:comment          "Describes a condition to match."@en ;
+        rdfs:label            "match"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:domain           opp:Rule ;
+        rdfs:range            opp:Condition .
+
+osm:hasPredicate
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "hasPredicate"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:domain           opp:Condition .
+
+osm:hasObject
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "hasObject"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:domain           opp:Condition .
+
+osm:fromProperty
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "fromProperty"@en ;
+        rdfs:isDefinedBy      opp: .
+
+osm:hasAccessRules
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:comment          "An ordered list of rules that determines whether or not this way is accessible."@en ;
+        rdfs:label            "hasAccessRules"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            rdf:list .
+
+osm:hasOnewayRules
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "hasOnewayRules"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            rdf:list .
+
+osm:hasSpeedRules
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "hasSpeedRules"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            rdf:list .
+
+osm:hasPriorityRules
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "hasPriorityRules"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            rdf:list .
+
+osm:hasObstacleRules
+        a                     owl:ObjectProperty , rdf:Property ;
+        rdfs:label            "hasObstacleRules"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            rdf:list .
+
+# Data properties
+
+opp:hasMaxSpeed
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment          "The maximum configured speed, in km/h."@en ;
+        rdfs:label            "hasMaxSpeed"@en ;
+        rdfs:isDefinedBy      opp: ;
+        qudt:hasUnit          unit:KM-PER-HR ;
+        rdfs:range            xsd:double .
+
+opp:usePublicTransport
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment          "Should public transportation be used."@en ;
+        rdfs:label            "usePublicTransport"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:boolean .
+
+opp:hasAccess
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:label            "hasAccess"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:boolean .
+
+opp:isOneway
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:label            "isOneway"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:boolean .
+
+opp:isReversed
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:label            "isReversed"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:boolean .
+
+opp:hasSpeed
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:label            "hasSpeed"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:double .
+
+opp:hasPriority
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:label            "hasPriority"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:double .
+
+opp:isObstacle
+        a                     owl:DatatypeProperty , rdf:Property ;
+        rdfs:label            "isObstacle"@en ;
+        rdfs:isDefinedBy      opp: ;
+        rdfs:range            xsd:boolean .
