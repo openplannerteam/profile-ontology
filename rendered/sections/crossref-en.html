@@ -8,6 +8,9 @@ This section provides details for each class and property defined by OpenPlanner
             title="https://w3id.org/openplannerteam/profile#Condition">Condition</a>
       </li>
       <li>
+         <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+      </li>
+      <li>
          <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
       </li>
    </ul>
@@ -18,6 +21,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#Condition</p>
+      <div class="comment">
+         <span class="markdown">Defines a condition that must be must for a rule to apply.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -40,7 +46,50 @@ This section provides details for each class and property defined by OpenPlanner
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+            <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profile">
+      <h3>Profile<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#Profile</p>
+      <div class="comment">
+         <span class="markdown">Combines sets of rules and some default values.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/openplannerteam/profile#">https://w3id.org/openplannerteam/profile#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAccessRules"
+               title="https://w3id.org/openplannerteam/profile#hasAccessRules">hasAccessRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasObstacleRules"
+               title="https://w3id.org/openplannerteam/profile#hasObstacleRules">hasObstacleRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOnewayRules"
+               title="https://w3id.org/openplannerteam/profile#hasOnewayRules">hasOnewayRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPriorityRules"
+               title="https://w3id.org/openplannerteam/profile#hasPriorityRules">hasPriorityRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSpeedRules"
+               title="https://w3id.org/openplannerteam/profile#hasSpeedRules">hasSpeedRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#usePublicTransport"
+               title="https://w3id.org/openplannerteam/profile#usePublicTransport">usePublicTransport</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Condition"
+               title="https://w3id.org/openplannerteam/profile#Condition">Condition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -52,6 +101,10 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#Rule</p>
+      <div class="comment">
+         <span class="markdown">The core element of a profile, it defines a condition that must be met to make a conclusion.
+                                 The condition may be empty, which means that the rule always applies.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -61,13 +114,44 @@ This section provides details for each class and property defined by OpenPlanner
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#match" title="https://w3id.org/openplannerteam/profile#match">match</a>
+            <a href="#concludes"
+               title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAccess"
+               title="https://w3id.org/openplannerteam/profile#hasAccess">hasAccess</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMaxSpeed"
+               title="https://w3id.org/openplannerteam/profile#hasMaxSpeed">hasMaxSpeed</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPriority"
+               title="https://w3id.org/openplannerteam/profile#hasPriority">hasPriority</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSpeed"
+               title="https://w3id.org/openplannerteam/profile#hasSpeed">hasSpeed</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isObstacle"
+               title="https://w3id.org/openplannerteam/profile#isObstacle">isObstacle</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isOneway"
+               title="https://w3id.org/openplannerteam/profile#isOneway">isOneway</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isReversed"
+               title="https://w3id.org/openplannerteam/profile#isReversed">isReversed</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#match" title="https://w3id.org/openplannerteam/profile#match">match</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasAccessRules"
+               title="https://w3id.org/openplannerteam/profile#hasAccessRules">hasAccessRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasObstacleRules"
+               title="https://w3id.org/openplannerteam/profile#hasObstacleRules">hasObstacleRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOnewayRules"
+               title="https://w3id.org/openplannerteam/profile#hasOnewayRules">hasOnewayRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPriorityRules"
+               title="https://w3id.org/openplannerteam/profile#hasPriorityRules">hasPriorityRules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSpeedRules"
+               title="https://w3id.org/openplannerteam/profile#hasSpeedRules">hasSpeedRules</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#Condition"
                title="https://w3id.org/openplannerteam/profile#Condition">Condition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -118,6 +202,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#fromProperty</p>
+      <div class="comment">
+         <span class="markdown">Copy the value that corresponds with this key.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -133,7 +220,7 @@ This section provides details for each class and property defined by OpenPlanner
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasAccessRules</p>
       <div class="comment">
-         <span class="markdown">An ordered list of rules that determines whether or not this way is accessible.</span>
+         <span class="markdown">An ordered list of rules that determines whether or not a way is accessible. Only the first rule that matches will be used.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -143,9 +230,14 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#list">list</span>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -158,6 +250,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasObject</p>
+      <div class="comment">
+         <span class="markdown">Match things with this specific object (value).</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -182,6 +277,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasObstacleRules</p>
+      <div class="comment">
+         <span class="markdown">An ordered list of rules that determines whether or not a node can be traversed. Only the first rule that matches will be used.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -190,9 +288,14 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#list">list</span>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -205,6 +308,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasOnewayRules</p>
+      <div class="comment">
+         <span class="markdown">An ordered list of rules that determines whether or not something is a oneway street. Only the first rule that matches will be used.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -213,9 +319,14 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#list">list</span>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -228,6 +339,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasPredicate</p>
+      <div class="comment">
+         <span class="markdown">Match things with this specific predicate (key).</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -252,6 +366,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasPriorityRules</p>
+      <div class="comment">
+         <span class="markdown">An ordered list of rules that determines an additional multiplier that will be used to demote/promote certain roads. Only the first rule that matches will be used.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -260,9 +377,14 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#list">list</span>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -275,6 +397,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasSpeedRules</p>
+      <div class="comment">
+         <span class="markdown">An ordered list of rules that determines the maximum speed on a street. Only the first rule that matches will be used.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -283,9 +408,14 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#list">list</span>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -327,6 +457,10 @@ This section provides details for each class and property defined by OpenPlanner
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#concludes"
+            title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+      </li>
+      <li>
          <a href="#hasAccess"
             title="https://w3id.org/openplannerteam/profile#hasAccess">hasAccess</a>
       </li>
@@ -359,13 +493,16 @@ This section provides details for each class and property defined by OpenPlanner
             title="https://w3id.org/openplannerteam/profile#usePublicTransport">usePublicTransport</a>
       </li>
    </ul>
-   <div class="entity" id="hasAccess">
-      <h3>hasAccess<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="concludes">
+      <h3>conclude<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasAccess</p>
+         <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#concludes</p>
+      <div class="comment">
+         <span class="markdown">Describes a conclusion that can be made after matching a rule.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -374,6 +511,61 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasAccess"
+                  title="https://w3id.org/openplannerteam/profile#hasAccess">hasAccess</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMaxSpeed"
+                  title="https://w3id.org/openplannerteam/profile#hasMaxSpeed">hasMaxSpeed</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPriority"
+                  title="https://w3id.org/openplannerteam/profile#hasPriority">hasPriority</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSpeed"
+                  title="https://w3id.org/openplannerteam/profile#hasSpeed">hasSpeed</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#isObstacle"
+                  title="https://w3id.org/openplannerteam/profile#isObstacle">isObstacle</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#isOneway"
+                  title="https://w3id.org/openplannerteam/profile#isOneway">isOneway</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#isReversed"
+                  title="https://w3id.org/openplannerteam/profile#isReversed">isReversed</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAccess">
+      <h3>hasAccess<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasAccess</p>
+      <div class="comment">
+         <span class="markdown">Is a street accessible?</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/openplannerteam/profile#">https://w3id.org/openplannerteam/profile#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
@@ -389,7 +581,7 @@ This section provides details for each class and property defined by OpenPlanner
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasMaxSpeed</p>
       <div class="comment">
-         <span class="markdown">The maximum configured speed, in km/h.</span>
+         <span class="markdown">The maximum legal or physical speed, in km/h.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -399,6 +591,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
@@ -413,6 +616,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasPriority</p>
+      <div class="comment">
+         <span class="markdown">A multiplier that is used to promote/demote roads. A value larger than 1 will promote a road.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -421,6 +627,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
@@ -435,6 +652,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#hasSpeed</p>
+      <div class="comment">
+         <span class="markdown">The default speed on a road, in km/h.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -443,6 +663,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
@@ -457,6 +688,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#isObstacle</p>
+      <div class="comment">
+         <span class="markdown">Is a node an obstacle?</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -465,6 +699,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
@@ -479,6 +724,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#isOneway</p>
+      <div class="comment">
+         <span class="markdown">Is it a oneway street?</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -487,6 +735,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
@@ -501,6 +760,9 @@ This section provides details for each class and property defined by OpenPlanner
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/openplannerteam/profile#isReversed</p>
+      <div class="comment">
+         <span class="markdown">If it is a oneway street, should the direction of the nodes be reversed?</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -509,6 +771,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#concludes"
+                  title="https://w3id.org/openplannerteam/profile#concludes">conclude</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Rule" title="https://w3id.org/openplannerteam/profile#Rule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
@@ -534,56 +807,17 @@ This section provides details for each class and property defined by OpenPlanner
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile" title="https://w3id.org/openplannerteam/profile#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
             </dd>
          </dl>
       </div>
-   </div>
-</div><div id="namedindividuals">
-   <h3 id="namedindividuals" class="list">Named Individuals</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#https://biblio.ugent.be/person/802002413821" title="https://biblio.ugent.be/person/802002413821">
-            <span>802002413821</span>
-         </a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/openplannerteam/profile" title="https://w3id.org/openplannerteam/profile">
-            <span>profile</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="https://biblio.ugent.be/person/802002413821">
-      <h3>802002413821<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://biblio.ugent.be/person/802002413821</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/openplannerteam/profile">
-      <h3>profile<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/openplannerteam/profile</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Document">document</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
