@@ -1,1018 +1,1443 @@
 {
-  "@context":{
-    "osm":"https://w3id.org/openstreetmap/terms#",
-    "opp":"https://w3id.org/openplannerteam/profile#",
-    "prov":"http://www.w3.org/ns/prov#",
+  "@context": {
+    "osm": "https://w3id.org/openstreetmap/terms#",
+    "opp": "https://w3id.org/openplannerteam/profile#",
+    "prov": "http://www.w3.org/ns/prov#",
     "hasMaxSpeed": {
-    	"@id": "opp:hasMaxSpeed"
+      "@id": "opp:hasMaxSpeed"
     },
     "usePublicTransport": {
-    	"@id": "opp:usePublicTransport"
+      "@id": "opp:usePublicTransport"
     },
     "hasAccessRules": {
-    	"@id": "opp:hasAccessRules",
-    	"@container": "@list"
+      "@id": "opp:hasAccessRules"
     },
     "hasOnewayRules": {
-    	"@id": "opp:hasOnewayRules",
-    	"@container": "@list"
+      "@id": "opp:hasOnewayRules"
     },
     "hasSpeedRules": {
-    	"@id": "opp:hasSpeedRules",
-    	"@container": "@list"
+      "@id": "opp:hasSpeedRules"
     },
     "hasPriorityRules": {
-    	"@id": "opp:hasPriorityRules",
-    	"@container": "@list"
+      "@id": "opp:hasPriorityRules"
     },
     "hasObstacleRules": {
-    	"@id": "opp:hasObstacleRules",
-    	"@container": "@list"
-    },
-    "fromProperty": {
-    	"@id": "opp:fromProperty",
-    	"@type": "@id"
+      "@id": "opp:hasObstacleRules"
     },
     "hasAccess": {
-    	"@id": "opp:hasAccess"
+      "@id": "opp:hasAccess"
     },
     "isOneway": {
-    	"@id": "opp:isOneway"
+      "@id": "opp:isOneway"
     },
     "isReversed": {
-    	"@id": "opp:isReversed"
+      "@id": "opp:isReversed"
     },
     "hasSpeed": {
-    	"@id": "opp:hasSpeed"
+      "@id": "opp:hasSpeed"
     },
     "isObstacle": {
-    	"@id": "opp:isObstacle"
-    },
-    "match": {
-    	"@id": "opp:match"
-    },
-    "hasPredicate": {
-    	"@id": "opp:hasPredicate",
-    	"@type": "@id"
-    },
-    "hasObject": {
-    	"@id": "opp:hasObject",
-    	"@type": "@id"
+      "@id": "opp:isObstacle"
     },
     "hasPriority": {
-    	"@id": "opp:hasPriority",
-    	"@type": "@id"
+      "@id": "opp:hasPriority"
+    },
+    "concludes": {
+      "@id": "opp:concludes"
+    },
+    "hasOrder": {
+      "@id": "opp:hasOrder"
+    },
+    "match": {
+      "@id": "opp:match"
+    },
+    "fromProperty": {
+      "@id": "opp:fromProperty",
+      "@type": "@id"
+    },
+    "hasPredicate": {
+      "@id": "opp:hasPredicate",
+      "@type": "@id"
+    },
+    "hasObject": {
+      "@id": "opp:hasObject",
+      "@type": "@id"
     }
   },
-  "rdfs:label":"example car profile",
-  "hasMaxSpeed":130,
-  "usePublicTransport":false,
-  "hasAccessRules":[
+  "rdfs:label": "example car profile",
+  "hasMaxSpeed": 130,
+  "usePublicTransport": false,
+  "hasAccessRules": [
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Proposed"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Proposed"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:construction",
-        "hasObject":"osm:UnderConstruction"
+      "match": {
+        "hasPredicate": "osm:construction",
+        "hasObject": "osm:UnderConstruction"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Steps"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Steps"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:NoAccess"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Agricultural"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Forestry"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:FreeAccess"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:FreeAccess"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Private"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Permissive"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Permissive"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Designated"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Designated"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Destination"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Customers"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Official"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Official"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:NoAccess"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Agricultural"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Forestry"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:FreeAccess"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:FreeAccess"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Private"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Permissive"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Permissive"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Designated"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Designated"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Destination"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Customers"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Official"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Official"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:NoAccess"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Agricultural"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Forestry"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:FreeAccess"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:FreeAccess"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Private"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Permissive"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Permissive"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Designated"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Designated"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Destination"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Customers"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:NoAccess"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Agricultural"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Forestry"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:FreeAccess"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:FreeAccess"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Private"
       },
-      "hasAccess":false
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Permissive"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Permissive"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Destination"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Customers"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Motorway"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Motorway"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:MotorwayLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:MotorwayLink"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Trunk"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Trunk"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:TrunkLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:TrunkLink"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Primary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Primary"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:PrimaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:PrimaryLink"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Secondary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Secondary"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:SecondaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:SecondaryLink"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:TertiaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Tertiary"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:Tertiary",
-        "hasObject":"osm:Unclassified"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:TertiaryLink"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Road"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Unclassified"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Residential"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Road"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Track"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Residential"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Service"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Track"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:LivingStreet"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Service"
       },
-      "hasAccess":true
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
     },
     {
-      "hasAccess":false
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:LivingStreet"
+      },
+      "concludes": {
+        "hasAccess": true
+      },
+      "hasOrder": 6
+    },
+    {
+      "concludes": {
+        "hasAccess": false
+      },
+      "hasOrder": 100
     }
   ],
-  "hasOnewayRules":[
+  "hasOnewayRules": [
     {
-      "match":{
-        "hasPredicate":"osm:oneway",
-        "hasObject":"osm:InOrder"
+      "match": {
+        "hasPredicate": "osm:oneway",
+        "hasObject": "osm:InOrder"
       },
-      "isOneway":true
+      "concludes": {
+        "isOneway": true,
+        "isReversed": false
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:oneway",
-        "hasObject":"osm:InReverseOrder"
+      "match": {
+        "hasPredicate": "osm:oneway",
+        "hasObject": "osm:InReverseOrder"
       },
-      "isOneway":true,
-      "isReversed":true
+      "concludes": {
+        "isOneway": true,
+        "isReversed": true
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:oneway",
-        "hasObject":"osm:Bidirectional"
+      "match": {
+        "hasPredicate": "osm:oneway",
+        "hasObject": "osm:Bidirectional"
       },
-      "isOneway":false
+      "concludes": {
+        "isOneway": false
+      },
+      "hasOrder": 0
     },
     {
-      "isOneway":false
+      "concludes": {
+        "isOneway": false
+      },
+      "hasOrder": 100
     }
   ],
-  "hasSpeedRules":[
+  "hasSpeedRules": [
     {
-      "match":{
-        "hasPredicate":"osm:maxspeed"
+      "match": {
+        "hasPredicate": "osm:maxspeed"
       },
-      "hasSpeed":{
-        "fromProperty":"osm:maxspeed"
-      }
+      "concludes": {
+        "hasSpeed": {
+          "fromProperty": "osm:maxspeed"
+        }
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Motorway"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Motorway"
       },
-      "hasSpeed":110
+      "concludes": {
+        "hasSpeed": 110
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:MotorwayLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:MotorwayLink"
       },
-      "hasSpeed":110
+      "concludes": {
+        "hasSpeed": 110
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Trunk"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Trunk"
       },
-      "hasSpeed":100
+      "concludes": {
+        "hasSpeed": 100
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:TrunkLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:TrunkLink"
       },
-      "hasSpeed":100
+      "concludes": {
+        "hasSpeed": 100
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Primary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Primary"
       },
-      "hasSpeed":65
+      "concludes": {
+        "hasSpeed": 65
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:PrimaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:PrimaryLink"
       },
-      "hasSpeed":65
+      "concludes": {
+        "hasSpeed": 65
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Secondary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Secondary"
       },
-      "hasSpeed":60
+      "concludes": {
+        "hasSpeed": 60
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:SecondaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:SecondaryLink"
       },
-      "hasSpeed":60
+      "concludes": {
+        "hasSpeed": 60
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Tertiary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Tertiary"
       },
-      "hasSpeed":45
+      "concludes": {
+        "hasSpeed": 45
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:TertiaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:TertiaryLink"
       },
-      "hasSpeed":45
+      "concludes": {
+        "hasSpeed": 45
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Unclassified"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Unclassified"
       },
-      "hasSpeed":35
+      "concludes": {
+        "hasSpeed": 35
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Road"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Road"
       },
-      "hasSpeed":35
+      "concludes": {
+        "hasSpeed": 35
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Residential"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Residential"
       },
-      "hasSpeed":35
+      "concludes": {
+        "hasSpeed": 35
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Track"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Track"
       },
-      "hasSpeed":15
+      "concludes": {
+        "hasSpeed": 15
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Service"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Service"
       },
-      "hasSpeed":30
+      "concludes": {
+        "hasSpeed": 30
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:LivingStreet"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:LivingStreet"
       },
-      "hasSpeed":25
+      "concludes": {
+        "hasSpeed": 25
+      },
+      "hasOrder": 1
     },
     {
-      "hasSpeed":45
+      "concludes": {
+        "hasSpeed": 45
+      },
+      "hasOrder": 100
     }
   ],
-  "hasPriorityRules":[
+  "hasPriorityRules": [
     {
-      "match":{
-        "hasPredicate":"osm:tracktype",
-        "hasObject":"osm:Grade5"
+      "match": {
+        "hasPredicate": "osm:tracktype",
+        "hasObject": "osm:Grade5"
       },
-      "hasPriority":0.2
+      "concludes": {
+        "hasPriority": 0.2
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Private"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Destination"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Delivery"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Delivery"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Customers"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Private"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Destination"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Delivery"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Delivery"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Customers"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Private"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Destination"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Delivery"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Delivery"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Customers"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Private"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Private"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Destination"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Destination"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Delivery"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Delivery"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Customers"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Customers"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:smoothness",
-        "hasObject":"osm:VeryBadSmoothness"
+      "match": {
+        "hasPredicate": "osm:smoothness",
+        "hasObject": "osm:VeryBadSmoothness"
       },
-      "hasPriority":0.3
+      "concludes": {
+        "hasPriority": 0.3
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:smoothness",
-        "hasObject":"osm:HorribleSmoothness"
+      "match": {
+        "hasPredicate": "osm:smoothness",
+        "hasObject": "osm:HorribleSmoothness"
       },
-      "hasPriority":0.15
+      "concludes": {
+        "hasPriority": 0.15
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:smoothness",
-        "hasObject":"osm:VeryHorribleSmoothness"
+      "match": {
+        "hasPredicate": "osm:smoothness",
+        "hasObject": "osm:VeryHorribleSmoothness"
       },
-      "hasPriority":0.1
+      "concludes": {
+        "hasPriority": 0.1
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:smoothness",
-        "hasObject":"osm:Impassable"
+      "match": {
+        "hasPredicate": "osm:smoothness",
+        "hasObject": "osm:Impassable"
       },
-      "hasPriority":0.1
+      "concludes": {
+        "hasPriority": 0.1
+      },
+      "hasOrder": 5
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Motorway"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Motorway"
       },
-      "hasPriority":1.1
+      "concludes": {
+        "hasPriority": 1.1
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:MotorwayLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:MotorwayLink"
       },
-      "hasPriority":1.05
+      "concludes": {
+        "hasPriority": 1.05
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Trunk"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Trunk"
       },
-      "hasPriority":1.0
+      "concludes": {
+        "hasPriority": 1.0
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:TrunkLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:TrunkLink"
       },
-      "hasPriority":0.95
+      "concludes": {
+        "hasPriority": 0.95
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Primary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Primary"
       },
-      "hasPriority":1.0
+      "concludes": {
+        "hasPriority": 1.0
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:PrimaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:PrimaryLink"
       },
-      "hasPriority":0.95
+      "concludes": {
+        "hasPriority": 0.95
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Secondary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Secondary"
       },
-      "hasPriority":0.95
+      "concludes": {
+        "hasPriority": 0.95
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:SecondaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:SecondaryLink"
       },
-      "hasPriority":0.9
+      "concludes": {
+        "hasPriority": 0.9
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Tertiary"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Tertiary"
       },
-      "hasPriority":0.9
+      "concludes": {
+        "hasPriority": 0.9
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:TertiaryLink"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:TertiaryLink"
       },
-      "hasPriority":0.85
+      "concludes": {
+        "hasPriority": 0.85
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Unclassified"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Unclassified"
       },
-      "hasPriority":0.7
+      "concludes": {
+        "hasPriority": 0.7
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Road"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Road"
       },
-      "hasPriority":0.7
+      "concludes": {
+        "hasPriority": 0.7
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Residential"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Residential"
       },
-      "hasPriority":0.7
+      "concludes": {
+        "hasPriority": 0.7
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Track"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Track"
       },
-      "hasPriority":0.5
+      "concludes": {
+        "hasPriority": 0.5
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:Service"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:Service"
       },
-      "hasPriority":0.5
+      "concludes": {
+        "hasPriority": 0.5
+      },
+      "hasOrder": 6
     },
     {
-      "match":{
-        "hasPredicate":"osm:highway",
-        "hasObject":"osm:LivingStreet"
+      "match": {
+        "hasPredicate": "osm:highway",
+        "hasObject": "osm:LivingStreet"
       },
-      "hasPriority":0.5
+      "concludes": {
+        "hasPriority": 0.5
+      },
+      "hasOrder": 6
     },
     {
-      "hasPriority":0.7
+      "concludes": {
+        "hasPriority": 0.7
+      },
+      "hasOrder": 100
     }
   ],
-  "hasObstacleRules":[
+  "hasObstacleRules": [
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:NoAccess"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Agricultural"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:motorcar",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:motorcar",
+        "hasObject": "osm:Forestry"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 0
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:NoAccess"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Agricultural"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:motor_vehicle",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:motor_vehicle",
+        "hasObject": "osm:Forestry"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 1
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:NoAccess"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Agricultural"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:vehicle",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:vehicle",
+        "hasObject": "osm:Forestry"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 2
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:NoAccess"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:NoAccess"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Agricultural"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Agricultural"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:access",
-        "hasObject":"osm:Forestry"
+      "match": {
+        "hasPredicate": "osm:access",
+        "hasObject": "osm:Forestry"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 3
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:Bollard"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:Bollard"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:Chain"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:Chain"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:Debris"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:Debris"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:Block"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:Block"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:Gate"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:Gate"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:Turnstile"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:Turnstile"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:BusTrap"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:BusTrap"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
     },
     {
-      "match":{
-        "hasPredicate":"osm:barrier",
-        "hasObject":"osm:CycleBarrier"
+      "match": {
+        "hasPredicate": "osm:barrier",
+        "hasObject": "osm:CycleBarrier"
       },
-      "isObstacle":true
+      "concludes": {
+        "isObstacle": true
+      },
+      "hasOrder": 4
+    },
+    {
+      "concludes": {
+        "isObstacle": false
+      },
+      "hasOrder": 100
     }
   ]
 }
