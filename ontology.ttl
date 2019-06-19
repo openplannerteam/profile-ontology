@@ -146,17 +146,9 @@ opp:hasObstacleRules
 
 # Data properties
 
-opp:concludes
-        a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:comment          "Describes a conclusion that can be made after matching a rule."@en ;
-        rdfs:label            "conclude"@en ;
-        rdfs:isDefinedBy      opp: ;
-        rdfs:domain           opp:Rule .
-
 opp:hasMaxSpeed
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
-        rdfs:comment          "The maximum legal or physical speed, in km/h."@en ;
+        rdfs:comment          "How fast can you phyisically go, in km/h."@en ;
         rdfs:label            "hasMaxSpeed"@en ;
         rdfs:isDefinedBy      opp: ;
         qudt:hasUnit          unit:KM-PER-HR ;
@@ -173,7 +165,6 @@ opp:usePublicTransport
 
 opp:hasAccess
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
         rdfs:comment          "Is a street accessible?"@en ;
         rdfs:label            "hasAccess"@en ;
         rdfs:isDefinedBy      opp: ;
@@ -182,7 +173,6 @@ opp:hasAccess
 
 opp:isOneway
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
         rdfs:comment          "Is it a oneway street?"@en ;
         rdfs:label            "isOneway"@en ;
         rdfs:isDefinedBy      opp: ;
@@ -191,7 +181,6 @@ opp:isOneway
 
 opp:isReversed
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
         rdfs:comment          "If it is a oneway street, should the direction of the nodes be reversed?"@en ;
         rdfs:label            "isReversed"@en ;
         rdfs:isDefinedBy      opp: ;
@@ -200,16 +189,14 @@ opp:isReversed
 
 opp:hasSpeed
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
         rdfs:label            "hasSpeed"@en ;
-        rdfs:comment          "The default speed on a road, in km/h."@en ;
+        rdfs:comment          "The legal speed limit on a road, in km/h."@en ;
         rdfs:isDefinedBy      opp: ;
         rdfs:domain           opp:Rule ;
         rdfs:range            xsd:double .
 
 opp:hasPriority
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
         rdfs:label            "hasPriority"@en ;
         rdfs:comment          "A multiplier that is used to promote/demote roads. A value larger than 1 will promote a road."@en ;
         rdfs:isDefinedBy      opp: ;
@@ -218,7 +205,6 @@ opp:hasPriority
 
 opp:isObstacle
         a                     owl:DatatypeProperty , rdf:Property ;
-        rdfs:subPropertyOf    opp:concludes ;
         rdfs:label            "isObstacle"@en ;
         rdfs:comment          "Is a node an obstacle?"@en ;
         rdfs:isDefinedBy      opp: ;
