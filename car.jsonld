@@ -10,19 +10,24 @@
     	"@id": "opp:usePublicTransport"
     },
     "hasAccessRules": {
-    	"@id": "opp:hasAccessRules"
+    	"@id": "opp:hasAccessRules",
+    	"@container": "@list"
     },
     "hasOnewayRules": {
-    	"@id": "opp:hasOnewayRules"
+    	"@id": "opp:hasOnewayRules",
+    	"@container": "@list"
     },
     "hasSpeedRules": {
-    	"@id": "opp:hasSpeedRules"
+    	"@id": "opp:hasSpeedRules",
+    	"@container": "@list"
     },
     "hasPriorityRules": {
-    	"@id": "opp:hasPriorityRules"
+    	"@id": "opp:hasPriorityRules",
+    	"@container": "@list"
     },
     "hasObstacleRules": {
-    	"@id": "opp:hasObstacleRules"
+    	"@id": "opp:hasObstacleRules",
+    	"@container": "@list"
     },
     "fromProperty": {
     	"@id": "opp:fromProperty",
