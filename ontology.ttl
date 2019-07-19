@@ -104,12 +104,6 @@ opp:hasObject
         rdfs:isDefinedBy      opp: ;
         rdfs:domain           opp:Condition .
 
-opp:fromProperty
-        a                     owl:ObjectProperty , rdf:Property ;
-        rdfs:comment          "Copy the value that corresponds with this key."@en ;
-        rdfs:label            "fromProperty"@en ;
-        rdfs:isDefinedBy      opp: .
-
 opp:hasAccessRules
         a                     owl:ObjectProperty , rdf:Property ;
         rdfs:comment          "An ordered list of rules that determines whether or not a way is accessible. Only the first rule that matches will be used."@en ;

@@ -33,18 +33,6 @@
 <http://qudt.org/schema/qudt/hasUnit> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2002/07/owl#cardinality
-owl:cardinality rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#maxCardinality
-owl:maxCardinality rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#minCardinality
-owl:minCardinality rdf:type owl:AnnotationProperty .
-
-
 ###  http://xmlns.com/foaf/0.1/mbox
 <http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
 
@@ -61,12 +49,20 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/openplannerteam/profile#concludes
+:concludes rdf:type owl:ObjectProperty ;
+           rdfs:domain :Rule ;
+           rdfs:range :Conclusion ;
+           rdfs:comment "Defines what can be concluded if a rule matches."@en ;
+           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+           rdfs:label "concludes"@en .
+
+
 ###  https://w3id.org/openplannerteam/profile#fromProperty
 :fromProperty rdf:type owl:ObjectProperty ;
               rdfs:comment "Copy the value that corresponds with this key."@en ;
               rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-              rdfs:label "fromProperty"@en ;
-              owl:cardinality 1 .
+              rdfs:label "fromProperty"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasAccessRules
@@ -75,8 +71,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
                 rdfs:range :Rule ;
                 rdfs:comment "An ordered list of rules that determines whether or not a way is accessible. Only the first rule that matches will be used."@en ;
                 rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-                rdfs:label "hasAccessRules"@en ;
-                owl:maxCardinality 1 .
+                rdfs:label "hasAccessRules"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasObject
@@ -84,8 +79,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
            rdfs:domain :Condition ;
            rdfs:comment "Match things with this specific object (value)."@en ;
            rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-           rdfs:label "hasObject"@en ;
-           owl:minCardinality 0 .
+           rdfs:label "hasObject"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasObstacleRules
@@ -94,8 +88,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
                   rdfs:range :Rule ;
                   rdfs:comment "An ordered list of rules that determines whether or not a node can be traversed. Only the first rule that matches will be used."@en ;
                   rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-                  rdfs:label "hasObstacleRules"@en ;
-                  owl:maxCardinality 1 .
+                  rdfs:label "hasObstacleRules"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasOnewayRules
@@ -104,8 +97,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
                 rdfs:range :Rule ;
                 rdfs:comment "An ordered list of rules that determines whether or not something is a oneway street. Only the first rule that matches will be used."@en ;
                 rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-                rdfs:label "hasOnewayRules"@en ;
-                owl:maxCardinality 1 .
+                rdfs:label "hasOnewayRules"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasPredicate
@@ -113,8 +105,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
               rdfs:domain :Condition ;
               rdfs:comment "Match things with this specific predicate (key)."@en ;
               rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-              rdfs:label "hasPredicate"@en ;
-              owl:minCardinality 0 .
+              rdfs:label "hasPredicate"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasPriorityRules
@@ -123,8 +114,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
                   rdfs:range :Rule ;
                   rdfs:comment "An ordered list of rules that determines an additional multiplier that will be used to demote/promote certain roads. Only the first rule that matches will be used."@en ;
                   rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-                  rdfs:label "hasPriorityRules"@en ;
-                  owl:maxCardinality 1 .
+                  rdfs:label "hasPriorityRules"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#hasSpeedRules
@@ -133,8 +123,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
                rdfs:range :Rule ;
                rdfs:comment "An ordered list of rules that determines the maximum speed on a street. Only the first rule that matches will be used."@en ;
                rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-               rdfs:label "hasSpeedRules"@en ;
-               owl:maxCardinality 1 .
+               rdfs:label "hasSpeedRules"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#match
@@ -143,26 +132,16 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
        rdfs:range :Condition ;
        rdfs:comment "Describes a condition to match."@en ;
        rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-       rdfs:label "match"@en ;
-       owl:minCardinality 0 .
+       rdfs:label "match"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://w3id.org/openplannerteam/profile#concludes
-:concludes rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Rule ;
-           rdfs:comment "Describes a conclusion that can be made after matching a rule."@en ;
-           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
-           rdfs:label "conclude"@en .
-
-
 ###  https://w3id.org/openplannerteam/profile#hasAccess
 :hasAccess rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :concludes ;
-           rdfs:domain :Rule ;
+           rdfs:domain :Conclusion ;
            rdfs:range xsd:boolean ;
            rdfs:comment "Is a street accessible?"@en ;
            rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
@@ -171,19 +150,26 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/openplannerteam/profile#hasMaxSpeed
 :hasMaxSpeed rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :concludes ;
-             rdfs:domain :Rule ;
+             rdfs:domain :Profile ;
              rdfs:range xsd:double ;
              <http://qudt.org/schema/qudt/hasUnit> <http://qudt.org/vocab/unit/KM-PER-HR> ;
-             rdfs:comment "The maximum legal or physical speed, in km/h."@en ;
+             rdfs:comment "How fast can you phyisically go, in km/h."@en ;
              rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
              rdfs:label "hasMaxSpeed"@en .
 
 
+###  https://w3id.org/openplannerteam/profile#hasOrder
+:hasOrder rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Rule ;
+          rdfs:range xsd:double ;
+          rdfs:comment "When should this rule get tried? If multiple rules match, the one with the lowest order wins. A random one will get picked in case of ties."@en ;
+          rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+          rdfs:label "hasOrder"@en .
+
+
 ###  https://w3id.org/openplannerteam/profile#hasPriority
 :hasPriority rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :concludes ;
-             rdfs:domain :Rule ;
+             rdfs:domain :Conclusion ;
              rdfs:range xsd:double ;
              rdfs:comment "A multiplier that is used to promote/demote roads. A value larger than 1 will promote a road."@en ;
              rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
@@ -192,18 +178,16 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/openplannerteam/profile#hasSpeed
 :hasSpeed rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :concludes ;
-          rdfs:domain :Rule ;
+          rdfs:domain :Conclusion ;
           rdfs:range xsd:double ;
-          rdfs:comment "The default speed on a road, in km/h."@en ;
+          rdfs:comment "The legal speed limit on a road, in km/h."@en ;
           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
           rdfs:label "hasSpeed"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#isObstacle
 :isObstacle rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :concludes ;
-            rdfs:domain :Rule ;
+            rdfs:domain :Conclusion ;
             rdfs:range xsd:boolean ;
             rdfs:comment "Is a node an obstacle?"@en ;
             rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
@@ -212,8 +196,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/openplannerteam/profile#isOneway
 :isOneway rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :concludes ;
-          rdfs:domain :Rule ;
+          rdfs:domain :Conclusion ;
           rdfs:range xsd:boolean ;
           rdfs:comment "Is it a oneway street?"@en ;
           rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
@@ -222,8 +205,7 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/openplannerteam/profile#isReversed
 :isReversed rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :concludes ;
-            rdfs:domain :Rule ;
+            rdfs:domain :Conclusion ;
             rdfs:range xsd:boolean ;
             rdfs:comment "If it is a oneway street, should the direction of the nodes be reversed?"@en ;
             rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
@@ -249,6 +231,16 @@ owl:minCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/openplannerteam/profile#Conclusion
+:Conclusion rdf:type owl:Class ;
+            owl:disjointWith :Condition ,
+                             :Profile ,
+                             :Rule ;
+            rdfs:comment "Defines what can be concluded if a rule matches." ;
+            rdfs:isDefinedBy <https://w3id.org/openplannerteam/profile#> ;
+            rdfs:label "Conclusion"@en .
 
 
 ###  https://w3id.org/openplannerteam/profile#Condition

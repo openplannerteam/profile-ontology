@@ -678,17 +678,6 @@
   "hasSpeedRules": [
     {
       "match": {
-        "hasPredicate": "osm:maxspeed"
-      },
-      "concludes": {
-        "hasSpeed": {
-          "fromProperty": "osm:maxspeed"
-        }
-      },
-      "hasOrder": 0
-    },
-    {
-      "match": {
         "hasPredicate": "osm:highway",
         "hasObject": "osm:Motorway"
       },

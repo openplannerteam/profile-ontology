@@ -57,34 +57,25 @@
   },
   "namespace" : [ ],
   "metrics" : {
-    "classCount" : 5,
-    "objectPropertyCount" : 9,
+    "classCount" : 6,
+    "objectPropertyCount" : 10,
     "datatypePropertyCount" : 9,
     "individualCount" : 2
   },
   "class" : [ {
-    "id" : "11",
+    "id" : "17",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "12",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "13",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "5",
+    "id" : "19",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "8",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "15",
+    "id" : "20",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "16",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "10",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -93,72 +84,63 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
-    "type" : "owl:Thing"
+    "id" : "27",
+    "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "34",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "35",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "28",
-    "type" : "rdfs:Literal"
+    "id" : "25",
+    "type" : "owl:Thing"
   }, {
     "id" : "2",
     "type" : "owl:Thing"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
   } ],
   "classAttribute" : [ {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "11",
+    "id" : "17",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "12",
+    "id" : "19",
     "label" : {
       "IRI-based" : "double"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "13",
-    "label" : {
-      "IRI-based" : "double"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#double",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "5",
-    "label" : {
-      "IRI-based" : "double"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "8",
     "label" : {
-      "IRI-based" : "boolean"
+      "IRI-based" : "double"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "15",
+    "id" : "20",
     "label" : {
-      "IRI-based" : "boolean"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "16",
-    "label" : {
-      "IRI-based" : "boolean"
+      "IRI-based" : "double"
     }
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#Profile",
@@ -179,7 +161,7 @@
     "comment" : {
       "undefined" : "Combines sets of rules and some default values."
     },
-    "id" : "10"
+    "id" : "14"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#Condition",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
@@ -201,6 +183,26 @@
     },
     "id" : "1"
   }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#Conclusion",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Conclusion",
+      "en" : "Conclusion"
+    },
+    "comment" : {
+      "undefined" : "Defines what can be concluded if a rule matches."
+    },
+    "id" : "4"
+  }, {
     "iri" : "https://w3id.org/openplannerteam/profile#Rule",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
     "instances" : 0,
@@ -219,7 +221,7 @@
     "comment" : {
       "undefined" : "The core element of a profile, it defines a condition that must be met to make a conclusion.\n                                 The condition may be empty, which means that the rule always applies."
     },
-    "id" : "4"
+    "id" : "7"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Document",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -243,20 +245,41 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "24"
+    "id" : "27"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "21",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "30",
+    "id" : "35",
     "label" : {
       "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "25",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "double"
     }
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
@@ -287,20 +310,20 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "35"
+    "id" : "40"
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "28",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "IRI-based" : "boolean"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "2",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "boolean"
     }
   } ],
   "property" : [ {
@@ -311,60 +334,72 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "6",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "7",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "14",
-    "type" : "owl:objectProperty"
+    "id" : "13",
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "17",
-    "type" : "owl:objectProperty"
+    "id" : "15",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "16",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "18",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "19",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "20",
+    "id" : "21",
     "type" : "owl:objectProperty"
   }, {
     "id" : "22",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "23",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "25",
-    "type" : "owl:datatypeProperty"
+    "id" : "24",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "26",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "27",
+    "id" : "28",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "29",
+    "id" : "30",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "31",
     "type" : "owl:objectProperty"
   }, {
     "id" : "32",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "33",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "34",
+    "id" : "36",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "36",
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -372,12 +407,6 @@
     "baseIri" : "https://w3id.org/openplannerteam/profile",
     "range" : "2",
     "annotations" : {
-      "minCardinality" : [ {
-        "identifier" : "minCardinality",
-        "language" : "undefined",
-        "value" : "0",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -413,21 +442,37 @@
     },
     "domain" : "4",
     "comment" : {
-      "en" : "The default speed on a road, in km/h."
+      "en" : "The legal speed limit on a road, in km/h."
     },
     "attributes" : [ "datatype" ],
     "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasOrder",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOrder",
+      "en" : "hasOrder"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "When should this rule get tried? If multiple rules match, the one with the lowest order wins. A random one will get picked in case of ties."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "6"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#match",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
     "range" : "1",
     "annotations" : {
-      "minCardinality" : [ {
-        "identifier" : "minCardinality",
-        "language" : "undefined",
-        "value" : "0",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -439,16 +484,16 @@
       "IRI-based" : "match",
       "en" : "match"
     },
-    "domain" : "4",
+    "domain" : "7",
     "comment" : {
       "en" : "Describes a condition to match."
     },
     "attributes" : [ "object" ],
-    "id" : "6"
+    "id" : "9"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#isObstacle",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "8",
+    "range" : "11",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -466,23 +511,32 @@
       "en" : "Is a node an obstacle?"
     },
     "attributes" : [ "datatype" ],
-    "id" : "7"
+    "id" : "10"
   }, {
-    "range" : "4",
-    "domain" : "10",
+    "range" : "7",
+    "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "9"
+    "id" : "12"
+  }, {
+    "range" : "14",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "7",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "7",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasObject",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
     "range" : "2",
     "annotations" : {
-      "minCardinality" : [ {
-        "identifier" : "minCardinality",
-        "language" : "undefined",
-        "value" : "0",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -499,105 +553,87 @@
       "en" : "Match things with this specific object (value)."
     },
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasPriorityRules",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/openplannerteam/profile#",
         "type" : "iri"
-      } ],
-      "maxCardinality" : [ {
-        "identifier" : "maxCardinality",
-        "language" : "undefined",
-        "value" : "1",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "hasPriorityRules",
       "en" : "hasPriorityRules"
     },
-    "domain" : "10",
+    "domain" : "14",
     "comment" : {
       "en" : "An ordered list of rules that determines an additional multiplier that will be used to demote/promote certain roads. Only the first rule that matches will be used."
     },
     "attributes" : [ "object" ],
-    "id" : "17"
+    "id" : "21"
   }, {
-    "range" : "10",
-    "domain" : "1",
+    "range" : "14",
+    "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "18"
+    "id" : "22"
   }, {
-    "range" : "4",
-    "domain" : "1",
+    "range" : "1",
+    "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "19"
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#fromProperty",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "21",
+    "range" : "25",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/openplannerteam/profile#",
         "type" : "iri"
-      } ],
-      "cardinality" : [ {
-        "identifier" : "cardinality",
-        "language" : "undefined",
-        "value" : "1",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "fromProperty",
       "en" : "fromProperty"
     },
-    "domain" : "21",
+    "domain" : "25",
     "comment" : {
       "en" : "Copy the value that corresponds with this key."
     },
     "attributes" : [ "object" ],
-    "id" : "20"
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasObstacleRules",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/openplannerteam/profile#",
         "type" : "iri"
-      } ],
-      "maxCardinality" : [ {
-        "identifier" : "maxCardinality",
-        "language" : "undefined",
-        "value" : "1",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "hasObstacleRules",
       "en" : "hasObstacleRules"
     },
-    "domain" : "10",
+    "domain" : "14",
     "comment" : {
       "en" : "An ordered list of rules that determines whether or not a node can be traversed. Only the first rule that matches will be used."
     },
     "attributes" : [ "object" ],
-    "id" : "22"
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#isOneway",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "15",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -615,11 +651,11 @@
       "en" : "Is it a oneway street?"
     },
     "attributes" : [ "datatype" ],
-    "id" : "23"
+    "id" : "28"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasAccess",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "11",
+    "range" : "17",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -637,39 +673,33 @@
       "en" : "Is a street accessible?"
     },
     "attributes" : [ "datatype" ],
-    "id" : "25"
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasAccessRules",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/openplannerteam/profile#",
         "type" : "iri"
-      } ],
-      "maxCardinality" : [ {
-        "identifier" : "maxCardinality",
-        "language" : "undefined",
-        "value" : "1",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "hasAccessRules",
       "en" : "hasAccessRules"
     },
-    "domain" : "10",
+    "domain" : "14",
     "comment" : {
       "en" : "An ordered list of rules that determines whether or not a way is accessible. Only the first rule that matches will be used."
     },
     "attributes" : [ "object" ],
-    "id" : "26"
+    "id" : "31"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#concludes",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "28",
+    "range" : "4",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -680,18 +710,18 @@
     },
     "label" : {
       "IRI-based" : "concludes",
-      "en" : "conclude"
+      "en" : "concludes"
     },
-    "domain" : "4",
+    "domain" : "7",
     "comment" : {
-      "en" : "Describes a conclusion that can be made after matching a rule."
+      "en" : "Defines what can be concluded if a rule matches."
     },
-    "attributes" : [ "datatype" ],
-    "id" : "27"
+    "attributes" : [ "object" ],
+    "id" : "32"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#usePublicTransport",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "30",
+    "range" : "34",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -704,44 +734,16 @@
       "IRI-based" : "usePublicTransport",
       "en" : "usePublicTransport"
     },
-    "domain" : "10",
+    "domain" : "14",
     "comment" : {
       "en" : "Should public transportation be used."
     },
     "attributes" : [ "datatype" ],
-    "id" : "29"
-  }, {
-    "iri" : "https://w3id.org/openplannerteam/profile#hasOnewayRules",
-    "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "4",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/openplannerteam/profile#",
-        "type" : "iri"
-      } ],
-      "maxCardinality" : [ {
-        "identifier" : "maxCardinality",
-        "language" : "undefined",
-        "value" : "1",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOnewayRules",
-      "en" : "hasOnewayRules"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "An ordered list of rules that determines whether or not something is a oneway street. Only the first rule that matches will be used."
-    },
-    "attributes" : [ "object" ],
-    "id" : "31"
+    "id" : "33"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#isReversed",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "16",
+    "range" : "35",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -759,11 +761,11 @@
       "en" : "If it is a oneway street, should the direction of the nodes be reversed?"
     },
     "attributes" : [ "datatype" ],
-    "id" : "32"
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasPriority",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "13",
+    "range" : "20",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -781,11 +783,33 @@
       "en" : "A multiplier that is used to promote/demote roads. A value larger than 1 will promote a road."
     },
     "attributes" : [ "datatype" ],
-    "id" : "33"
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/openplannerteam/profile#hasOnewayRules",
+    "baseIri" : "https://w3id.org/openplannerteam/profile",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/openplannerteam/profile#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOnewayRules",
+      "en" : "hasOnewayRules"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "An ordered list of rules that determines whether or not something is a oneway street. Only the first rule that matches will be used."
+    },
+    "attributes" : [ "object" ],
+    "id" : "38"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasMaxSpeed",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "12",
+    "range" : "19",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -804,39 +828,33 @@
       "IRI-based" : "hasMaxSpeed",
       "en" : "hasMaxSpeed"
     },
-    "domain" : "4",
+    "domain" : "14",
     "comment" : {
-      "en" : "The maximum legal or physical speed, in km/h."
+      "en" : "How fast can you phyisically go, in km/h."
     },
     "attributes" : [ "datatype" ],
-    "id" : "34"
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/openplannerteam/profile#hasSpeedRules",
     "baseIri" : "https://w3id.org/openplannerteam/profile",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/openplannerteam/profile#",
         "type" : "iri"
-      } ],
-      "maxCardinality" : [ {
-        "identifier" : "maxCardinality",
-        "language" : "undefined",
-        "value" : "1",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "hasSpeedRules",
       "en" : "hasSpeedRules"
     },
-    "domain" : "10",
+    "domain" : "14",
     "comment" : {
       "en" : "An ordered list of rules that determines the maximum speed on a street. Only the first rule that matches will be used."
     },
     "attributes" : [ "object" ],
-    "id" : "36"
+    "id" : "41"
   } ]
 }

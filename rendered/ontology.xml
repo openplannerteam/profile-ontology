@@ -52,27 +52,6 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#cardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/mbox -->
 
 
@@ -106,6 +85,19 @@
     
 
 
+    <!-- https://w3id.org/openplannerteam/profile#concludes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/openplannerteam/profile#concludes">
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:range rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
+        <rdfs:comment xml:lang="en">Defines what can be concluded if a rule matches.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
+        <rdfs:label xml:lang="en">concludes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/openplannerteam/profile#fromProperty -->
 
 
@@ -113,7 +105,6 @@
         <rdfs:comment xml:lang="en">Copy the value that corresponds with this key.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">fromProperty</rdfs:label>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
     </owl:ObjectProperty>
     
 
@@ -127,7 +118,6 @@
         <rdfs:comment xml:lang="en">An ordered list of rules that determines whether or not a way is accessible. Only the first rule that matches will be used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasAccessRules</rdfs:label>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
     </owl:ObjectProperty>
     
 
@@ -140,7 +130,6 @@
         <rdfs:comment xml:lang="en">Match things with this specific object (value).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasObject</rdfs:label>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:minCardinality>
     </owl:ObjectProperty>
     
 
@@ -154,7 +143,6 @@
         <rdfs:comment xml:lang="en">An ordered list of rules that determines whether or not a node can be traversed. Only the first rule that matches will be used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasObstacleRules</rdfs:label>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
     </owl:ObjectProperty>
     
 
@@ -168,7 +156,6 @@
         <rdfs:comment xml:lang="en">An ordered list of rules that determines whether or not something is a oneway street. Only the first rule that matches will be used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasOnewayRules</rdfs:label>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
     </owl:ObjectProperty>
     
 
@@ -181,7 +168,6 @@
         <rdfs:comment xml:lang="en">Match things with this specific predicate (key).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasPredicate</rdfs:label>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:minCardinality>
     </owl:ObjectProperty>
     
 
@@ -195,7 +181,6 @@
         <rdfs:comment xml:lang="en">An ordered list of rules that determines an additional multiplier that will be used to demote/promote certain roads. Only the first rule that matches will be used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasPriorityRules</rdfs:label>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
     </owl:ObjectProperty>
     
 
@@ -209,7 +194,6 @@
         <rdfs:comment xml:lang="en">An ordered list of rules that determines the maximum speed on a street. Only the first rule that matches will be used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasSpeedRules</rdfs:label>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
     </owl:ObjectProperty>
     
 
@@ -223,7 +207,6 @@
         <rdfs:comment xml:lang="en">Describes a condition to match.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">match</rdfs:label>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:minCardinality>
     </owl:ObjectProperty>
     
 
@@ -240,24 +223,11 @@
     
 
 
-    <!-- https://w3id.org/openplannerteam/profile#concludes -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#concludes">
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
-        <rdfs:comment xml:lang="en">Describes a conclusion that can be made after matching a rule.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
-        <rdfs:label xml:lang="en">conclude</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/openplannerteam/profile#hasAccess -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#hasAccess">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Is a street accessible?</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
@@ -270,13 +240,25 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#hasMaxSpeed">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Profile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <qudt:hasUnit rdf:resource="http://qudt.org/vocab/unit/KM-PER-HR"/>
-        <rdfs:comment xml:lang="en">The maximum legal or physical speed, in km/h.</rdfs:comment>
+        <rdfs:comment xml:lang="en">How fast can you phyisically go, in km/h.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasMaxSpeed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/openplannerteam/profile#hasOrder -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#hasOrder">
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">When should this rule get tried? If multiple rules match, the one with the lowest order wins. A random one will get picked in case of ties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
+        <rdfs:label xml:lang="en">hasOrder</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -285,8 +267,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#hasPriority">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">A multiplier that is used to promote/demote roads. A value larger than 1 will promote a road.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
@@ -299,10 +280,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#hasSpeed">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment xml:lang="en">The default speed on a road, in km/h.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The legal speed limit on a road, in km/h.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
         <rdfs:label xml:lang="en">hasSpeed</rdfs:label>
     </owl:DatatypeProperty>
@@ -313,8 +293,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#isObstacle">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Is a node an obstacle?</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
@@ -327,8 +306,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#isOneway">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Is it a oneway street?</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
@@ -341,8 +319,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/openplannerteam/profile#isReversed">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/openplannerteam/profile#concludes"/>
-        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:domain rdf:resource="https://w3id.org/openplannerteam/profile#Conclusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">If it is a oneway street, should the direction of the nodes be reversed?</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
@@ -387,6 +364,20 @@
 
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/openplannerteam/profile#Conclusion -->
+
+
+    <owl:Class rdf:about="https://w3id.org/openplannerteam/profile#Conclusion">
+        <owl:disjointWith rdf:resource="https://w3id.org/openplannerteam/profile#Condition"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/openplannerteam/profile#Profile"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/openplannerteam/profile#Rule"/>
+        <rdfs:comment>Defines what can be concluded if a rule matches.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/openplannerteam/profile#"/>
+        <rdfs:label xml:lang="en">Conclusion</rdfs:label>
+    </owl:Class>
     
 
 

@@ -2,15 +2,6 @@
   "@id" : "http://qudt.org/schema/qudt/hasUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/2002/07/owl#cardinality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://xmlns.com/foaf/0.1/Document",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -74,6 +65,26 @@
     "@value" : "OpenPlanner Profile Vocabulary"
   } ]
 }, {
+  "@id" : "https://w3id.org/openplannerteam/profile#Conclusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defines what can be concluded if a rule matches."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/openplannerteam/profile#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Conclusion"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/openplannerteam/profile#Condition"
+  }, {
+    "@id" : "https://w3id.org/openplannerteam/profile#Profile"
+  }, {
+    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+  } ]
+}, {
   "@id" : "https://w3id.org/openplannerteam/profile#Condition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -122,10 +133,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#concludes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Describes a conclusion that can be made after matching a rule."
+    "@value" : "Defines what can be concluded if a rule matches."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Rule"
@@ -135,7 +146,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "conclude"
+    "@value" : "concludes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#fromProperty",
@@ -150,10 +164,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "fromProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasAccess",
@@ -163,7 +173,7 @@
     "@value" : "Is a street accessible?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -174,9 +184,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasAccessRules",
@@ -197,10 +204,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Rule"
-  } ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasMaxSpeed",
@@ -210,10 +213,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The maximum legal or physical speed, in km/h."
+    "@value" : "How fast can you phyisically go, in km/h."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Profile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -224,9 +227,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasObject",
@@ -244,10 +244,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "hasObject"
-  } ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasObstacleRules",
@@ -268,10 +264,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Rule"
-  } ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasOnewayRules",
@@ -292,10 +284,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+  } ]
+}, {
+  "@id" : "https://w3id.org/openplannerteam/profile#hasOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "When should this rule get tried? If multiple rules match, the one with the lowest order wins. A random one will get picked in case of ties."
   } ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/openplannerteam/profile#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasOrder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasPredicate",
@@ -313,10 +321,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "hasPredicate"
-  } ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasPriority",
@@ -326,7 +330,7 @@
     "@value" : "A multiplier that is used to promote/demote roads. A value larger than 1 will promote a road."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -337,9 +341,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasPriorityRules",
@@ -360,20 +361,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Rule"
-  } ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasSpeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The default speed on a road, in km/h."
+    "@value" : "The legal speed limit on a road, in km/h."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -384,9 +381,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#hasSpeedRules",
@@ -407,10 +401,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Rule"
-  } ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#isObstacle",
@@ -420,7 +410,7 @@
     "@value" : "Is a node an obstacle?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -431,9 +421,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#isOneway",
@@ -443,7 +430,7 @@
     "@value" : "Is it a oneway street?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -454,9 +441,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#isReversed",
@@ -466,7 +450,7 @@
     "@value" : "If it is a oneway street, should the direction of the nodes be reversed?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#Rule"
+    "@id" : "https://w3id.org/openplannerteam/profile#Conclusion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#"
@@ -477,9 +461,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/openplannerteam/profile#concludes"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#match",
@@ -500,10 +481,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/openplannerteam/profile#Condition"
-  } ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/openplannerteam/profile#usePublicTransport",
